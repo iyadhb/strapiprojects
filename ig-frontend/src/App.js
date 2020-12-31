@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+
+import Post from './components/Post'
+
+const post = {
+  likes: 20,
+  description: "This is my post",
+  image: {
+    url: "/uploads/pexels_snapwire_34950_df1d2d4f18.jpg"
+  }
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Post
+      likes={post.likes}
+      description={post.description}
+      url={post.image && post.image.url}
+    />
     </div>
   );
 }
