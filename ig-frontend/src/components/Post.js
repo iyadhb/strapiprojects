@@ -14,8 +14,9 @@ const Post = ({description, likes, url}) => {
             <div>
                 <span>Likes: {likes}</span>
             </div>
-
+           
         </div>
+     
     )
 }
 

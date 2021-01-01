@@ -11,12 +11,17 @@ const Home = () => {
         setPosts(data)
         }
         getPosts()
+        
   },[]);
+
+  
 
   return (
         <div className="Home">
         {[posts.map(post =>(
+            
             <Post
+                key={post.id}
                 likes={post.likes}
                 description={post.description}
                 url={post.image && post.image.url}
